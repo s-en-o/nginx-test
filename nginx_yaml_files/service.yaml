@@ -13,3 +13,17 @@ spec:
   selector:
     app: nginx
   type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc-lb
+  namespace: default
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8081
+  selector:
+    app: nginx
