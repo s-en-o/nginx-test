@@ -7,9 +7,9 @@ metadata:
     app: nginx
 spec:
   ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
+    - port: 80
+      protocol: TCP
+      targetPort: 80
   selector:
     app: nginx
   type: NodePort
@@ -24,8 +24,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8081
-    targetPort: 80
-    protocol: TCP
+    - port: 8083
+      targetPort: 80
+      protocol: TCP
   selector:
     app: nginx
